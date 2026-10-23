@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="e">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tablero de actividades</title>
+
+  <!--hacemos referencia a la hoja de estilos css-->
+  <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+
+  <!--Hacemos el encabezado principal del tablero-->
+  <header>
+    <!--Usamos un h1 -->
+    <h1>Mi tablero de actividades</h1>
+    <!--Usamso un párrafo -->
+    <p>Organiza las actividades pendientes y terminadas.</p>
+
+    <button id = "boton_tema" type = "button"> Activar modo oscuro</button>
+  </header>
+
+
+<!-- Realizamos el contenido principal -->
+  <main>
+
+    <!--Hacemos una sección que contenga las dos áreas del tablero -->
+    <section id = "tablero" aria-label="Tablero de actividades">
+
+      <!--Hacemos el área de actividades pendientes -->
+      <section class = "zona" id = "zona_por_hacer">
+
+        <!--usamos un h2  indicando que es la la zona de por hacer -->
+        <h2>Por hacer</h2>
+
+        <!-- Creamos el contador de las actividades pendientes -->
+        <p>
+          Actividades:
+          <span id = "contador_por_hacer">6</span>
+        </p>
+
+        <!--Hacmos un div que será el contenedor de las tarjetas pendientes -->
+        <div class = "contenedor_tarjetas" id = "contenedor_por_hacer">
+
+          <!--Usamos la etiqeuta article-->
+          <article class = "tarjeta" id = "actividad_1">
+            <h3>Estudiar JavaScript</h3>
+          </article>
+          <!-- Fin de la primer ficha -->
+
+          <!--Usamos la etiqeuta article para la tarjeta 2-->
+          <article class = "tarjeta" id = "actividad_2">
+            <h3>Leer 30 minutos</h3>
+          </article>
+          <!-- Fin de la ficha 2 -->
+
+          <!--Usamos la etiqeuta article para la tarjeta 3-->
+          <article class = "tarjeta" id = "actividad_3">
+            <h3>Hacer ejercicio</h3>
+          </article>
+          <!-- Fin de la ficha 3 -->
+
+          <!--Usamos la etiqeuta article para la tarjeta 4-->
+          <article class = "tarjeta" id = "actividad_4">
+            <h3>Repasar HTML y CSS</h3>
+          </article>
+          <!-- Fin de la ficha 4 -->
+
+          <!--Usamos la etiqeuta article para la tarjeta 5-->
+          <article class = "tarjeta" id = "actividad_5">
+            <h3>Organizar los apuntes</h3>
+          </article>
+          <!-- Fin de la ficha 5 -->
+
+          <!--Usamos la etiqeuta article para la tarjeta 6-->
+          <article class = "tarjeta" id = "actividad_6">
+            <h3>Practicar Programacion</h3>
+          </article>
+          <!-- Fin de la ficha 6 -->
+        </div>
+        <!----------------------------------------------------------------------------------------------------->
+
+      </section>
+
+      <!--Creamos el área de actividades ya terminadas -->
+
+      <section class="zona" id = "zona_terminadas">
+
+        <!--Usamos un h2 para indicar el título de la zona -->
+        <h2>Terminadas</h2>
+
+        <!-- Contador de las actividades ya terminadas -->
+        <p>
+          Actividades:
+          <span id = "contador_terminadas">0</span>
+        </p>
+
+        <!--hacemos un div como contendor que reciba las terjetas completadas -->
+        <div class = "contenedor_tarjetas" id = "contenedor_terminadas"></div>
+      </section>
+      <!--Fin de la sección de la zona de tarejtas terminadas -->
+      <!------------------------------------------------------------------------------------------------------->
+    </section>
+
+    <!--Ahora, creamos un formulario para agregar nuevas actividades -->
+    <section id = "seccion_agregar">
+
+      <h2>Agregar una actividad</h2>
+
+      <!--Usamos la etiqueta form para indicar un formulario -->
+      <form id="formulario_actividad">
+
+        <label for="nombre_actividad">
+          Nombre de la actividad</label>
+
+        <!--usamos la etiqueta input indicando que se de tipo texto, con un id de nombre_actividad
+        nombre de actividad, y que muestre un mensaje-->
+        <input type="text"
+               name="nombre_actividad"
+               id="nombre_actividad"
+               placeholder="Ingresa tu nombre de la actividad"
+               required>
+
+        <!--Creamos un botón -->
+        <button type="submit">
+          Agregar Actividad
+        </button>
+
+      </form>
+    </section>
+    <!------------ fin de la sección del formulario ---------------------------------------------->
+
+
+    <!--Creamos una sección para los controles generales del tablero -->
+    <section id = "controles">
+      <button type = "button" id = "boton_reinicio">
+        Reiniciar tablero
+      </button>
+    </section>
+    <!--- fin de la sección del botón de reinicio ----------------------------------------------->
+  </main>
+
+  <!-- como buena práctica de programación web usamos el pie de página -->
+  <footer>
+    <p>Examen: Tablero interactivo</p>
+  </footer>
+
+  <!--Hacemos referencia al archivo javascript -->
+  <script type="module" src="JS/main.js"></script>
+</body>
+</html>
